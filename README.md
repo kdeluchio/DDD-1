@@ -22,9 +22,8 @@ Liste os subdomínios do sistema e classifique-os como **Core Domain**, **Suppor
 |-----------------------------|--------------------------------------------------------------------------------------------------|------------------|
 | Gestão de Ordem de Serviço | Gerencia as OSs, encaminha para a empresas prestadora especifica daquele serviço e mostra o tracking | Core Domain      |
 | Gestão de Mapas de Calor | Com base nos problemas relatados mostra disponibiliza vários mapas de calor para os gestores para auxiliar no planejamento das cidades | Core Domain      |
-| CRUD de Usuários | Cadastra os usuários do tipo cidadãos, gestor e prestadores                                             | Generic          |
-| Autenticação de Usuários | Gerencia login, permissões e segurança de acesso.                                            | Generic          |
-| CRUD de Empresas Prestadores| Cadastra de empresas prestadores de serviço                                            | Generic          |
+| Gestão de Usuários | Cadastra os usuários do tipo cidadãos, gestor e prestadores e Autenticação                                         | Generic          |
+| Gestão de Empresas Prestadores| Cadastra de empresas prestadores de serviço                                            | Generic          |
 | Serviços em Cloud AWS  | Servidores EC2, Bucket para imagens S3 e banco de dados RDS                               | Supporting       |
 
 ---
@@ -34,7 +33,7 @@ Liste e descreva os bounded contexts identificados no projeto. Explique a respon
 
 | **Bounded Context**           | **Responsabilidade**                                                                                 | **Subdomínios Relacionados** |
 |-------------------------------|-----------------------------------------------------------------------------------------------------|-----------------------------|
-| Contexto de OSs    | Gerencia as ordens de serviço. Encaminha as OSs para as empresas prestadoras e manda para o cidadão o tracking | Gestão de Ordem de Serviço       |
+| Contexto de OSs | Gerencia as ordens de serviço. Encaminha as OSs para as empresas prestadoras e manda para o cidadão o tracking | Gestão de Ordem de Serviço   |
 | Contexto de Analise    | Gera mapas de calor com base nos problemas identificados | Gestão de Mapas de Calor |
 | Contexto de Usuário    | Cadastra todos os tipos de usuários e disponibiliza os acessos pertinentes a cada um | CRUD de Usuários e Autenticação de Usuários |
 | Contexto de Prestadores de Serviço    | Cadastra as empresas prestadoras e qual é o tipo da prestação do serviço | CRUD de Empresas Prestadores |
@@ -61,8 +60,9 @@ Liste os termos principais da Linguagem Ubíqua do projeto. Explique brevemente 
 | **Termo**                    | **Descrição**                                                                                   |
 |------------------------------|-----------------------------------------------------------------------------------------------|
 | Cidadão                | É quem aponta os problemas.                                                       |
-| Gestor                | Gestor público que monitora e combra empresas prestadoras de serviço.                                                      |
+| Gestor                | Gestor público que monitora e cobra empresas prestadoras de serviço.                                                      |
 | Prestador                 | A empresa que presta o serviço (Iluminação, Limpeza e etc).                                                 |
+| OS                 | Ordem de serviço que contém a solicitação a ser atendida                                                 |
 
 ---
 
@@ -76,7 +76,8 @@ Para cada tipo de subdomínio, explique a abordagem para implementação:
 |-----------------------------|---------------------------------------|-------------------------------------------|
 | Gestão de Ordem de Serviço         | Desenvolvimento interno               |                                           |
 | Gestão de Mapas de Calor          | Desenvolvimento interno               |                                           |
-| Cadastro de Usuários        | Interno com uso de Auth0 para login   | Auth0                                     |
+| Gestão de Usuários        | Interno com uso de Auth0 para login   | Auth0                                     |
+| Gestão Empresas Prestadores           | Desenvolvimento interno               |                                           |
 
 ---
 
