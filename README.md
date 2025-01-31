@@ -16,7 +16,6 @@ Plataforma que permite aos cidadãos apontar problemas na sua comunidade, notifi
 ---
 
 ## 3. Identificação dos Subdomínios
-Liste os subdomínios do sistema e classifique-os como **Core Domain**, **Supporting Subdomain** ou **Generic Subdomain**.
 
 | **Subdomínio**              | **Descrição**                                                                                      | **Tipo**         |
 |-----------------------------|--------------------------------------------------------------------------------------------------|------------------|
@@ -29,7 +28,6 @@ Liste os subdomínios do sistema e classifique-os como **Core Domain**, **Suppor
 ---
 
 ## 4. Desenho dos Bounded Contexts
-Liste e descreva os bounded contexts identificados no projeto. Explique a responsabilidade de cada um.
 
 | **Bounded Context**           | **Responsabilidade**                                                                                 | **Subdomínios Relacionados** |
 |-------------------------------|-----------------------------------------------------------------------------------------------------|-----------------------------|
@@ -41,9 +39,6 @@ Liste e descreva os bounded contexts identificados no projeto. Explique a respon
 ---
 
 ## 5. Comunicação entre os Bounded Contexts
-Explique como os bounded contexts vão se comunicar. Use os padrões de comunicação, como:
-- **Mensageria/Eventos (desacoplado):** Ex.: O Contexto de Consultas emite um evento "Consulta Finalizada", consumido pelo Contexto de Pagamentos.
-- **APIs (síncrono):** Ex.: O Contexto de Pagamentos consulta informações de preços no Contexto de Consultas.
 
 | **De (Origem)**              | **Para (Destino)**          | **Forma de Comunicação**    | **Exemplo de Evento/Chamada**                  |
 |------------------------------|-----------------------------|-----------------------------|-----------------------------------------------|
@@ -58,7 +53,6 @@ Explique como os bounded contexts vão se comunicar. Use os padrões de comunica
 ---
 
 ## 6. Definição da Linguagem Ubíqua
-Liste os termos principais da Linguagem Ubíqua do projeto. Explique brevemente cada termo.
 
 | **Termo**                    | **Descrição**                                                                                   |
 |------------------------------|-----------------------------------------------------------------------------------------------|
@@ -70,10 +64,6 @@ Liste os termos principais da Linguagem Ubíqua do projeto. Explique brevemente 
 ---
 
 ## 7. Estratégia de Desenvolvimento
-Para cada tipo de subdomínio, explique a abordagem para implementação:
-- **Core Domain:** Desenvolver internamente com foco total.
-- **Supporting Subdomain:** Desenvolver internamente ou parcialmente terceirizar.
-- **Generic Subdomain:** Usar ferramentas ou serviços de mercado.
 
 | **Subdomínio**              | **Estratégia**                         | **Ferramentas ou Serviços (se aplicável)** |
 |-----------------------------|---------------------------------------|-------------------------------------------|
@@ -85,12 +75,8 @@ Para cada tipo de subdomínio, explique a abordagem para implementação:
 ---
 
 ## 8. Diagrama Visual (Opcional, mas Recomendado)
-Desenhe um diagrama que mostre:
-- Os bounded contexts.
-- Como eles se comunicam.
-- A relação com os subdomínios.
+![image](https://github.com/user-attachments/assets/d2670234-9f2a-4346-a00c-ff805ebb7e1b)
 
-Use ferramentas como **Miro**, **Lucidchart** ou mesmo papel e caneta para criar seu diagrama e adicionar ao projeto.
 
 ---
 
