@@ -39,9 +39,6 @@ Liste e descreva os bounded contexts identificados no projeto. Explique a respon
 | Ex.: Contexto de OSs    | Gerencia as ordens de serviço. Encaminha as OSs para as empresas prestadoras e manda para o cidadão o tracking | Gestão de Ordem de Serviço       |
 | Ex.: Contexto de Analise    | Gera mapas de calor com base nos problemas identificados | Gestão de Mapas de Calor |
 
-| Ex.: Contexto de Consultas    | Gerencia as consultas médicas, do agendamento à finalização, incluindo emissão de receitas.         | Gestão de Consultas         |
-| Ex.: Contexto de Pagamentos   | Processa cobranças de consultas e repasses para médicos ou clínicas.                              | Pagamentos                  |
-
 ---
 
 ## 5. Comunicação entre os Bounded Contexts
@@ -54,8 +51,7 @@ Explique como os bounded contexts vão se comunicar. Use os padrões de comunica
 | Contexto de Consultas        | Contexto de Pagamentos      | Mensageria (Evento)         | "Consulta Finalizada"                         |
 | Contexto de Cadastro          | Contexto de Consultas      | API                         | Obter informações de um Paciente pelo ID      |
 
-| Contexto de Consultas        | Contexto de Pagamentos      | Mensageria (Evento)         | "Consulta Finalizada"                         |
-| Contexto de Cadastro          | Contexto de Consultas      | API                         | Obter informações de um Paciente pelo ID      |
+
 
 ---
 
@@ -64,9 +60,9 @@ Liste os termos principais da Linguagem Ubíqua do projeto. Explique brevemente 
 
 | **Termo**                    | **Descrição**                                                                                   |
 |------------------------------|-----------------------------------------------------------------------------------------------|
-| Ex.: Consulta                | Sessão médica entre paciente e médico.                                                       |
-| Ex.: Paciente                | Usuário que agenda e realiza consultas.                                                      |
-| Ex.: Receita                 | Prescrição médica gerada durante a consulta.                                                 |
+| Ex.: Cidadão                | É quem aponta os problemas.                                                       |
+| Ex.: Gestor                | Gestor público que monitora e combra empresas prestadoras de serviço.                                                      |
+| Ex.: Prestador                 | A empresa que presta o serviço (Iluminação, Limpeza e etc).                                                 |
 
 ---
 
