@@ -47,9 +47,12 @@ Explique como os bounded contexts vão se comunicar. Use os padrões de comunica
 
 | **De (Origem)**              | **Para (Destino)**          | **Forma de Comunicação**    | **Exemplo de Evento/Chamada**                  |
 |------------------------------|-----------------------------|-----------------------------|-----------------------------------------------|
-| Contexto de Consultas        | Contexto de Pagamentos      | Mensageria (Evento)         | "Consulta Finalizada"                         |
-| Contexto de Cadastro          | Contexto de Consultas      | API                         | Obter informações de um Paciente pelo ID      |
-
+|Gestão de Usuários | Gestão de Ordem de Serviço | API  | Obtém OSs e seus status para usuários tipo cidadão|
+|Gestão de Usuários | Gestão de Ordem de Serviço | API  | Obtém as OSs pendentes de atendimento para usuários tipo prestadores|
+|Gestão de Usuários | Gestão de Ordem de Serviço | API  | Obtém as OSs pendentes de atendimento para usuários tipo prestadores|
+|Gestão de Ordem de Serviço | Gestão de Empresas Prestadores | Mensageria (Evento)  | Cria uma OSs na fila de atendimento desta empresa |
+|Gestão de Usuários | Gestão de Mapas de Calor | API  | Obtém quais mapas podem ser vistos|
+|Gestão de Mapas de Calor | Gestão de Ordem de Serviço | API  | Renderização dos mapas|
 
 
 ---
