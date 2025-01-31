@@ -20,12 +20,12 @@ Liste os subdomínios do sistema e classifique-os como **Core Domain**, **Suppor
 
 | **Subdomínio**              | **Descrição**                                                                                      | **Tipo**         |
 |-----------------------------|--------------------------------------------------------------------------------------------------|------------------|
-| Ex.: Gestão de Ordem de Serviço | Gerencia as OSs, encaminha para a empresas prestadora especifica daquele serviço e mostra o tracking | Core Domain      |
-| Ex.: Gestão de Mapas de Calor | Com base nos problemas relatados mostra disponibiliza vários mapas de calor para os gestores para auxiliar no planejamento das cidades | Core Domain      |
-| Ex.: CRUD de Usuários | Cadastra os usuários do tipo cidadãos, gestor e prestadores                                             | Generic          |
-| Ex.: CRUD de Empresas Prestadores| Cadastra de empresas prestadores de serviço                                            | Generic          |
-| Ex.: Autenticação de Usuários | Gerencia login, permissões e segurança de acesso.                                            | Generic          |
-| Ex.: Serviços em Cloud AWS  | Servidores EC2, Bucket para imagens S3 e banco de dados RDS                               | Supporting       |
+| Gestão de Ordem de Serviço | Gerencia as OSs, encaminha para a empresas prestadora especifica daquele serviço e mostra o tracking | Core Domain      |
+| Gestão de Mapas de Calor | Com base nos problemas relatados mostra disponibiliza vários mapas de calor para os gestores para auxiliar no planejamento das cidades | Core Domain      |
+| CRUD de Usuários | Cadastra os usuários do tipo cidadãos, gestor e prestadores                                             | Generic          |
+| Autenticação de Usuários | Gerencia login, permissões e segurança de acesso.                                            | Generic          |
+| CRUD de Empresas Prestadores| Cadastra de empresas prestadores de serviço                                            | Generic          |
+| Serviços em Cloud AWS  | Servidores EC2, Bucket para imagens S3 e banco de dados RDS                               | Supporting       |
 
 ---
 
@@ -34,9 +34,9 @@ Liste e descreva os bounded contexts identificados no projeto. Explique a respon
 
 | **Bounded Context**           | **Responsabilidade**                                                                                 | **Subdomínios Relacionados** |
 |-------------------------------|-----------------------------------------------------------------------------------------------------|-----------------------------|
-| Ex.: Contexto de OSs    | Gerencia as ordens de serviço. Encaminha as OSs para as empresas prestadoras e manda para o cidadão o tracking | Gestão de Ordem de Serviço       |
-| Ex.: Contexto de Analise    | Gera mapas de calor com base nos problemas identificados | Gestão de Mapas de Calor |
-| Ex.: Contexto de Usuário    | Cadastra os usuários | Gestão de Mapas de Calor |
+| Contexto de OSs    | Gerencia as ordens de serviço. Encaminha as OSs para as empresas prestadoras e manda para o cidadão o tracking | Gestão de Ordem de Serviço       |
+| Contexto de Analise    | Gera mapas de calor com base nos problemas identificados | Gestão de Mapas de Calor |
+| Contexto de Usuário    | Cadastra os usuários | Gestão de Mapas de Calor |
 
 ---
 
@@ -59,9 +59,9 @@ Liste os termos principais da Linguagem Ubíqua do projeto. Explique brevemente 
 
 | **Termo**                    | **Descrição**                                                                                   |
 |------------------------------|-----------------------------------------------------------------------------------------------|
-| Ex.: Cidadão                | É quem aponta os problemas.                                                       |
-| Ex.: Gestor                | Gestor público que monitora e combra empresas prestadoras de serviço.                                                      |
-| Ex.: Prestador                 | A empresa que presta o serviço (Iluminação, Limpeza e etc).                                                 |
+| Cidadão                | É quem aponta os problemas.                                                       |
+| Gestor                | Gestor público que monitora e combra empresas prestadoras de serviço.                                                      |
+| Prestador                 | A empresa que presta o serviço (Iluminação, Limpeza e etc).                                                 |
 
 ---
 
