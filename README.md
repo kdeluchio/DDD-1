@@ -36,7 +36,8 @@ Liste e descreva os bounded contexts identificados no projeto. Explique a respon
 |-------------------------------|-----------------------------------------------------------------------------------------------------|-----------------------------|
 | Contexto de OSs    | Gerencia as ordens de serviço. Encaminha as OSs para as empresas prestadoras e manda para o cidadão o tracking | Gestão de Ordem de Serviço       |
 | Contexto de Analise    | Gera mapas de calor com base nos problemas identificados | Gestão de Mapas de Calor |
-| Contexto de Usuário    | Cadastra os usuários | Gestão de Mapas de Calor |
+| Contexto de Usuário    | Cadastra todos os tipos de usuários e disponibiliza os acessos pertinentes a cada um | CRUD de Usuários e Autenticação de Usuários |
+| Contexto de Prestadores de Serviço    | Cadastra as empresas prestadoras e qual é o tipo da prestação do serviço | CRUD de Empresas Prestadores |
 
 ---
 
