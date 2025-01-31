@@ -6,13 +6,12 @@ Identificar os subdomínios do projeto, classificá-los (Core, Supporting, Gener
 ---
 
 ## 1. Nome do Projeto
-**[Escreva o nome do sistema ou aplicação que está sendo modelado]**
+Sistema de Zeladoria Urbana
 
 ---
 
 ## 2. Objetivo Principal do Projeto
-**[Explique o propósito do sistema em uma ou duas frases]**  
-*Exemplo:* Facilitar o agendamento de consultas médicas online entre pacientes e médicos.
+Plataforma que permite aos cidadãos apontar problemas na sua comunidade, notifica-los aos gestores urbanos e acompanhar o status das mesmas.
 
 ---
 
@@ -21,9 +20,14 @@ Liste os subdomínios do sistema e classifique-os como **Core Domain**, **Suppor
 
 | **Subdomínio**              | **Descrição**                                                                                      | **Tipo**         |
 |-----------------------------|--------------------------------------------------------------------------------------------------|------------------|
-| Ex.: Gestão de Consultas    | Gerencia o agendamento, consulta por vídeo e emissão de atestados e receitas.                   | Core Domain      |
-| Ex.: Cadastro de Usuários   | Gerencia o login, cadastro e permissões dos médicos e pacientes.                                | Supporting       |
-| Ex.: Pagamentos             | Processa pagamentos e repassa valores para médicos.                                             | Generic          |
+| Ex.: Gestão de Ordem de Serviço | Gerencia as OSs, encaminha para a empresas prestadora especifica daquele serviço e mostra o tracking | Core Domain      |
+| Ex.: Gestão de Mapas de Calor | Com base nos problemas relatados mostra disponibiliza vários mapas de calor para os gestores para auxiliar no planejamento das cidades | Core Domain      |
+| Ex.: CRUD de Cidadãos | Cadastra as usuários do tipo Cidadãos                                            | Generic          |
+| Ex.: CRUD de Gestores | Cadastra as usuários do tipo gestores urbanos                                            | Generic          |
+| Ex.: CRUD de Prestadores de Serviço | Cadastra as usuários que são prestadores de serviço                                            | Generic          |
+| Ex.: CRUD de Empresas Prestadores| Cadastra de empresas prestadores de serviço                                            | Generic          |
+| Ex.: Autenticação de Usuários | Gerencia login, permissões e segurança de acesso.                                            | Generic          |
+| Ex.: Serviços em Cloud AWS  | Servidores EC2, Bucket para imagens S3 e banco de dados RDS                               | Supporting       |
 
 ---
 
@@ -32,6 +36,9 @@ Liste e descreva os bounded contexts identificados no projeto. Explique a respon
 
 | **Bounded Context**           | **Responsabilidade**                                                                                 | **Subdomínios Relacionados** |
 |-------------------------------|-----------------------------------------------------------------------------------------------------|-----------------------------|
+| Ex.: Contexto de OSs    | Gerencia as ordens de serviço. Encaminha as OSs para as empresas prestadoras e manda para o cidadão o tracking | Gestão de Ordem de Serviço       |
+| Ex.: Contexto de Analise    | Gera mapas de calor com base nos problemas identificados | Gestão de Mapas de Calor |
+
 | Ex.: Contexto de Consultas    | Gerencia as consultas médicas, do agendamento à finalização, incluindo emissão de receitas.         | Gestão de Consultas         |
 | Ex.: Contexto de Pagamentos   | Processa cobranças de consultas e repasses para médicos ou clínicas.                              | Pagamentos                  |
 
@@ -44,6 +51,9 @@ Explique como os bounded contexts vão se comunicar. Use os padrões de comunica
 
 | **De (Origem)**              | **Para (Destino)**          | **Forma de Comunicação**    | **Exemplo de Evento/Chamada**                  |
 |------------------------------|-----------------------------|-----------------------------|-----------------------------------------------|
+| Contexto de Consultas        | Contexto de Pagamentos      | Mensageria (Evento)         | "Consulta Finalizada"                         |
+| Contexto de Cadastro          | Contexto de Consultas      | API                         | Obter informações de um Paciente pelo ID      |
+
 | Contexto de Consultas        | Contexto de Pagamentos      | Mensageria (Evento)         | "Consulta Finalizada"                         |
 | Contexto de Cadastro          | Contexto de Consultas      | API                         | Obter informações de um Paciente pelo ID      |
 
